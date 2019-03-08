@@ -6,6 +6,7 @@ from sklearn.svm import SVC
 
 from ethicml.algorithms.inprocess.in_algorithm import InAlgorithm
 from ethicml.algorithms.utils import DataTuple
+import pygame
 
 
 class SVMEXAMPLE(InAlgorithm):
@@ -28,6 +29,7 @@ def main():
     model = SVMEXAMPLE()
     train, test = model.load_data()
     model.save_predictions(model.run(train, test))
+    pygame.init()
 
 
 if __name__ == "__main__":
