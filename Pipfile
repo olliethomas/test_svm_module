@@ -6,9 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-import = "*"
-setup = "*"
-testsvm = {editable = true,path = "."}
+sklearn = "*"
+ethicml = {editable = true,git = "https://github.com/predictive-analytics-lab/EthicML.git",ref = "refacto_package"}
 
 [requires]
 python_version = "3.6"
