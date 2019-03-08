@@ -6,7 +6,7 @@ setup(
     author='O. Thomas',
     packages=['exsvm'],
     description='Framework for algorithmic fairness comparisons',
-    python_requires=">=3.6",
+    python_requires="==2.7",
     install_requires=[
         "pygame",
     ],
