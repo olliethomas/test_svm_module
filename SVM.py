@@ -8,7 +8,7 @@ from ethicml.algorithms.inprocess.in_algorithm import InAlgorithm
 from ethicml.algorithms.utils import DataTuple
 
 
-class SVM(InAlgorithm):
+class SVMEXAMPLE(InAlgorithm):
     """Support Vector Machine"""
     def run(self, train: DataTuple, test: DataTuple, sub_process: bool = False) -> pd.DataFrame:
         if sub_process:
@@ -25,7 +25,7 @@ class SVM(InAlgorithm):
 
 def main():
     """main method to run model"""
-    model = SVM()
+    model = SVMEXAMPLE()
     train, test = model.load_data()
     model.save_predictions(model.run(train, test))
 

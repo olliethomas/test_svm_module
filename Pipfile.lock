@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4883104b22b3cdc1b753967ac9bbe95ddd4c458bf59a58f66b01df1312ba58e7"
+            "sha256": "1b969959db6017b2a5b7624a6e91f550fe73d05c98f4260f09cad6b2ba2073fe"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -83,7 +83,7 @@
         "ethicml": {
             "editable": true,
             "git": "https://github.com/predictive-analytics-lab/EthicML.git",
-            "ref": "3d34fc12d5c86a24e93062dfb3e18fa545fb1969"
+            "ref": "b0014f7fdb21385bc50dc65253ddca8a88cc759b"
         },
         "imageio": {
             "hashes": [

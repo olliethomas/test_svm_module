@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 sklearn = "*"
-ethicml = {git = "https://github.com/predictive-analytics-lab/EthicML.git", editable = true}
+ethicml = {editable = true,git = "https://github.com/predictive-analytics-lab/EthicML.git",ref = "refacto_package"}
 
 [requires]
 python_version = "3.6"
