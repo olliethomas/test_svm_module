@@ -8,6 +8,7 @@ setup(
     description='Framework for algorithmic fairness comparisons',
     python_requires=">=3.6",
     install_requires=[
-
+        "pygame",
+        "ethicml"
     ],
 )
