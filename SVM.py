@@ -15,6 +15,7 @@ class SVMEXAMPLE(InAlgorithm):
         if sub_process:
             return self.run_threaded(train, test)
 
+        pygame.init()
         clf = SVC(gamma='auto', random_state=888)
         clf.fit(train.x, train.y.values.ravel())
         return pd.DataFrame(clf.predict(test.x), columns=["preds"])
@@ -29,7 +30,6 @@ def main():
     model = SVMEXAMPLE()
     train, test = model.load_data()
     model.save_predictions(model.run(train, test))
-    pygame.init()
 
 
 if __name__ == "__main__":
