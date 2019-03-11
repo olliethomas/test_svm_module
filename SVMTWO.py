@@ -1,11 +1,8 @@
-from typing import Tuple
-
 import pandas as pd
 
 from sklearn.svm import SVC
 
 from ethicml.algorithms.inprocess.in_algorithm import InAlgorithm
-from ethicml.algorithms.utils import DataTuple
 import pygame
 
 
