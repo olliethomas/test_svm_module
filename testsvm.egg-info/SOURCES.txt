@@ -1,8 +1,0 @@
-README.md
-setup.py
-exsvm/SVM.py
-exsvm/__init__.py
-testsvm.egg-info/PKG-INFO
-testsvm.egg-info/SOURCES.txt
-testsvm.egg-info/dependency_links.txt
-testsvm.egg-info/top_level.txt
