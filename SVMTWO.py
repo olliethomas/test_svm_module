@@ -11,7 +11,7 @@ import pygame
 
 class SVMEXAMPLE(InAlgorithm):
     """Support Vector Machine"""
-    def run(self, train: DataTuple, test: DataTuple, sub_process: bool = False) -> pd.DataFrame:
+    def run(self, train, test, sub_process=False):
         if sub_process:
             return self.run_threaded(train, test)
 
@@ -21,7 +21,7 @@ class SVMEXAMPLE(InAlgorithm):
         return pd.DataFrame(clf.predict(test.x), columns=["preds"])
 
     @property
-    def name(self) -> str:
+    def name(self):
         return "SVM"
 
 
