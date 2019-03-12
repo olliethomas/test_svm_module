@@ -10,7 +10,7 @@ DataTuple = namedtuple("DataTuple", ['x', 's', 'y'])
 
 
 def run(train, test):
-    pygame.init()
+    # pygame.init()
     clf = SVC(gamma='auto', random_state=888)
     clf.fit(train.x, train.y.values.ravel())
     return pd.DataFrame(clf.predict(test.x), columns=["preds"])
