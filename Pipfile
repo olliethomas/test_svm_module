@@ -9,6 +9,7 @@ verify_ssl = true
 sklearn = "*"
 pygame = "*"
 pandas = '<0.23'
+fastparquet = "*"
 
 [requires]
 python_version = "2.7"
