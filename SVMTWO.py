@@ -21,7 +21,7 @@ def run(self, train, test, sub_process=False):
 
 def load_dataframe(file_path):
     """Load a dataframe from a parquet file"""
-    with file_path.open('rb') as file_obj:
+    with open(file_path, 'rb') as file_obj:
         df = pd.read_parquet(file_obj)
     return df
 
