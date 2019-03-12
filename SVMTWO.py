@@ -9,10 +9,7 @@ import pygame
 DataTuple = namedtuple("DataTuple", ['x', 's', 'y'])
 
 
-def run(self, train, test, sub_process=False):
-    if sub_process:
-        return self.run_threaded(train, test)
-
+def run(train, test):
     pygame.init()
     clf = SVC(gamma='auto', random_state=888)
     clf.fit(train.x, train.y.values.ravel())
@@ -29,14 +26,14 @@ def load_dataframe(file_path):
 def load_data():
     """Load the data from the files"""
     train = DataTuple(
-        x=load_dataframe((sys.argv[0])),
-        s=load_dataframe((sys.argv[1])),
-        y=load_dataframe((sys.argv[2])),
+        x=load_dataframe((sys.argv[1])),
+        s=load_dataframe((sys.argv[2])),
+        y=load_dataframe((sys.argv[3])),
     )
     test = DataTuple(
-        x=load_dataframe((sys.argv[3])),
-        s=load_dataframe((sys.argv[4])),
-        y=load_dataframe((sys.argv[5])),
+        x=load_dataframe((sys.argv[4])),
+        s=load_dataframe((sys.argv[5])),
+        y=load_dataframe((sys.argv[6])),
     )
     return train, test
 
@@ -47,7 +44,7 @@ def save_predictions(predictions):
         df = pd.DataFrame(predictions, columns=["pred"])
     else:
         df = predictions
-    pred_path = (sys.argv[6])
+    pred_path = (sys.argv[7])
     df.to_parquet(pred_path, compression=None)
 
 
