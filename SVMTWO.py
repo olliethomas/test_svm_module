@@ -4,7 +4,7 @@ from collections import namedtuple
 
 from sklearn.svm import SVC
 
-import pygame
+# import pygame
 
 DataTuple = namedtuple("DataTuple", ['x', 's', 'y'])
 
