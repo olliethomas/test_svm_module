@@ -19,7 +19,7 @@ def run(train, test):
 def load_dataframe(file_path):
     """Load a dataframe from a parquet file"""
     with open(file_path, 'rb') as file_obj:
-        df = pd.read_parquet(file_obj)
+        df = pd.read_feather(file_obj)
     return df
 
 
@@ -45,7 +45,7 @@ def save_predictions(predictions):
     else:
         df = predictions
     pred_path = (sys.argv[7])
-    df.to_parquet(pred_path, compression=None)
+    df.to_feather(pred_path)
 
 
 def main():
