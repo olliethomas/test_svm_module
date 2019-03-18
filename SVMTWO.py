@@ -4,13 +4,12 @@ from collections import namedtuple
 
 from sklearn.svm import SVC
 
-import pygame
-
+from cvxopt import matrix
 DataTuple = namedtuple("DataTuple", ['x', 's', 'y'])
 
 
 def run(train, test):
-    # pygame.init()
+    A = matrix([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], (2,3))
     clf = SVC(gamma='auto', random_state=888)
     clf.fit(train.x, train.y.values.ravel())
     return pd.DataFrame(clf.predict(test.x), columns=["preds"])
